@@ -71,12 +71,11 @@ public class TestarCalculadora extends JFrame implements ActionListener {
     JButton btn9 = new JButton("9");
     JButton btn0 = new JButton("0");
 
-    JButton btnAdd = new JButton("+");
-    JButton btnSubtract = new JButton("-");
-    JButton btnMultiply = new JButton("*");
-    JButton btnDivide = new JButton("/");
-
-    JButton btnEquals = new JButton("=");
+    JButton btnAdicao = new JButton("+");
+    JButton btnSubtracao = new JButton("-");
+    JButton btnMultiplicacao = new JButton("*");
+    JButton btnDivisao = new JButton("/");
+    JButton btnIgual = new JButton("=");
 
     JLabel lblDisplay = new JLabel("");
 
@@ -95,13 +94,11 @@ public class TestarCalculadora extends JFrame implements ActionListener {
         btn0.addActionListener(this);
 
         // Botões de operações
-        btnAdd.addActionListener(this);
-        btnSubtract.addActionListener(this);
-        btnMultiply.addActionListener(this);
-        btnDivide.addActionListener(this);
-
-        // Botão de igual
-        btnEquals.addActionListener(this);
+        btnAdicao.addActionListener(this);
+        btnSubtracao.addActionListener(this);
+        btnMultiplicacao.addActionListener(this);
+        btnDivisao.addActionListener(this);
+        btnIgual.addActionListener(this);
 
         setLayout(null);
 
@@ -118,18 +115,15 @@ public class TestarCalculadora extends JFrame implements ActionListener {
         btn0.setBounds(110, 220, 50, 30);
 
         // Botões de operações
-        btnAdd.setBounds(230, 60, 50, 30);
-        btnSubtract.setBounds(230, 100, 50, 30);
-        btnMultiply.setBounds(230, 140, 50, 30);
-        btnDivide.setBounds(230, 180, 50, 30);
-
-        // Botão de igual
-        btnEquals.setBounds(230, 220, 50, 30);
+        btnAdicao.setBounds(230, 60, 50, 30);
+        btnSubtracao.setBounds(230, 100, 50, 30);
+        btnMultiplicacao.setBounds(230, 140, 50, 30);
+        btnDivisao.setBounds(230, 180, 50, 30);
+        btnIgual.setBounds(230, 220, 50, 30);
 
         // Display
         lblDisplay.setBounds(50, 10, 200, 30);
 
-        // Adicionando componentes ao JFrame
         add(btn1);
         add(btn2);
         add(btn3);
@@ -140,27 +134,23 @@ public class TestarCalculadora extends JFrame implements ActionListener {
         add(btn8);
         add(btn9);
         add(btn0);
-
-        add(btnAdd);
-        add(btnSubtract);
-        add(btnMultiply);
-        add(btnDivide);
-
-        add(btnEquals);
-
+        add(btnAdicao);
+        add(btnSubtracao);
+        add(btnMultiplicacao);
+        add(btnDivisao);
+        add(btnIgual);
         add(lblDisplay);
 
-        // Configurações do JFrame
+        //JFrame
         setTitle("Calculadora");
-        setSize(344, 300); // Ajustando a altura para acomodar o botão "=" abaixo dos botões de operações
-        setLocationRelativeTo(null);
+        setSize(344, 300); 
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
 
     public void actionPerformed(ActionEvent evento) {
-        // Adicione aqui a lógica de ação se necessário
+    	
     }
 
     public static void main(String[] args) {
